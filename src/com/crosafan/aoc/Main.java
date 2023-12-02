@@ -17,7 +17,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		Day2A day2A = new Day2A();
+		Day2B day2B = new Day2B();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
@@ -27,9 +27,7 @@ public class Main {
 		testLines.add("Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red");
 		testLines.add("Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green");
 
-		int redCount = 12, greenCount = 13, blueCount = 14;
-		
-		int result = day2A.solve(allLines,redCount,greenCount,blueCount);
+		int result = day2B.solve(allLines);
 
 		System.out.println(result);
 

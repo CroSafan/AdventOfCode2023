@@ -12,24 +12,29 @@ public class Main {
 
 		List<String> allLines = null;
 		try {
-			allLines = Files.readAllLines(Paths.get("resources/input02.txt"));
+			allLines = Files.readAllLines(Paths.get("resources/input03.txt"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		Day2B day2B = new Day2B();
+		Day3A day3A = new Day3A();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
-		testLines.add("Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green");
-		testLines.add("Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue");
-		testLines.add("Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red");
-		testLines.add("Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red");
-		testLines.add("Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green");
+		testLines.add("467..114..");
+		testLines.add("...*......");
+		testLines.add("..35..633.");
+		testLines.add("......#...");
+		testLines.add("617*......");
+		testLines.add(".....+.58.");
+		testLines.add("..592.....");
+		testLines.add("......755.");
+		testLines.add("...$.*....");
+		testLines.add(".664.598..");
 
-		int result = day2B.solve(allLines);
+		int result = day3A.solve(allLines);
 
-		System.out.println(result);
+		System.out.println("Result:"+result);
 
 	}
 

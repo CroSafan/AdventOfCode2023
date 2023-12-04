@@ -17,7 +17,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		Day3A day3A = new Day3A();
+		Day3B day3B = new Day3B();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
@@ -32,7 +32,7 @@ public class Main {
 		testLines.add("...$.*....");
 		testLines.add(".664.598..");
 
-		int result = day3A.solve(allLines);
+		int result = day3B.solve(allLines);
 
 		System.out.println("Result:"+result);
 

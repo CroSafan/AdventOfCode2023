@@ -17,7 +17,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		Day4A day4A = new Day4A();
+		Day4B day4B = new Day4B();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
@@ -28,7 +28,7 @@ public class Main {
 		testLines.add("Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36");
 		testLines.add("Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11");
 
-		int result = day4A.solve(allLines);
+		int result = day4B.solve(allLines);
 
 		System.out.println("Result:"+result);
 

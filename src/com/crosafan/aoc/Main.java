@@ -6,29 +6,59 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.crosafan.aoc.days.Day4B;
+import com.crosafan.aoc.days.Day5A;
+
 public class Main {
 
 	public static void main(String[] args) {
 
 		List<String> allLines = null;
 		try {
-			allLines = Files.readAllLines(Paths.get("resources/input04.txt"));
+			allLines = Files.readAllLines(Paths.get("resources/input05.txt"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		Day4B day4B = new Day4B();
+		Day5A day5A = new Day5A();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
-		testLines.add("Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53");
-		testLines.add("Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19");
-		testLines.add("Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1");
-		testLines.add("Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83");
-		testLines.add("Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36");
-		testLines.add("Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11");
+		testLines.add("seeds: 79 14 55 13");
+		testLines.add("");
+		testLines.add("seed-to-soil map:");
+		testLines.add("50 98 2");
+		testLines.add("52 50 48");
+		testLines.add("");
+		testLines.add("soil-to-fertilizer map:");
+		testLines.add("0 15 37");
+		testLines.add("37 52 2");
+		testLines.add("39 0 15");
+		testLines.add("");
+		testLines.add("fertilizer-to-water map:");
+		testLines.add("49 53 8");
+		testLines.add("0 11 42");
+		testLines.add("42 0 7");
+		testLines.add("57 7 4");
+		testLines.add("");
+		testLines.add("water-to-light map:");
+		testLines.add("88 18 7");
+		testLines.add("18 25 70");
+		testLines.add("");
+		testLines.add("light-to-temperature map:");
+		testLines.add("45 77 23");
+		testLines.add("81 45 19");
+		testLines.add("68 64 13");
+		testLines.add("");
+		testLines.add("temperature-to-humidity map:");
+		testLines.add("0 69 1");
+		testLines.add("1 0 69");
+		testLines.add("");
+		testLines.add("humidity-to-location map:");
+		testLines.add("60 56 37");
+		testLines.add("56 93 4");
 
-		int result = day4B.solve(allLines);
+		long result = day5A.solve(allLines);
 
 		System.out.println("Result:"+result);
 

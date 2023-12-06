@@ -1,4 +1,4 @@
-package com.crosafan.aoc;
+package com.crosafan.aoc.days;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.crosafan.aoc;
+package com.crosafan.aoc.days;
 
 import java.util.ArrayList;
 import java.util.List;

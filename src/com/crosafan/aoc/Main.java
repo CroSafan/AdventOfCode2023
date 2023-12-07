@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.crosafan.aoc.days.Day4B;
 import com.crosafan.aoc.days.Day5A;
+import com.crosafan.aoc.days.Day5B;
 
 public class Main {
 
@@ -20,7 +21,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		Day5A day5A = new Day5A();
+		Day5B day5B = new Day5B();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
@@ -58,7 +59,22 @@ public class Main {
 		testLines.add("60 56 37");
 		testLines.add("56 93 4");
 
-		long result = day5A.solve(allLines);
+		long result = day5B.solve(allLines);
+		
+		ArrayList<Long> test=new ArrayList<Long>();
+		test.add(4283162641L);
+		test.add(780711947L);
+		test.add(194991402L);
+		test.add(13286163L);
+		test.add(3191770485L);
+		test.add(295741385L);
+		test.add(2008786L);
+		test.add(332248829L);
+		test.add(749391108L);
+		test.add(412475024L);
+		
+		test.sort(null);
+		System.out.println(test.get(0));
 
 		System.out.println("Result:"+result);
 

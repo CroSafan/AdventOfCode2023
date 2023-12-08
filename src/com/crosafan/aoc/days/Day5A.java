@@ -3,6 +3,8 @@ package com.crosafan.aoc.days;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.crosafan.aoc.AOCHelper;
+
 public class Day5A {
 
 	public Long solve(List<String> allLines) {
@@ -24,7 +26,7 @@ public class Day5A {
 		Flag inHumidityToLocation = new Flag();
 
 		for (String num : allLines.get(0).split(": ")[1].split(" ")) {
-			if (isNumber(num)) {
+			if (AOCHelper.isNumber(num)) {
 				seeds.add(Long.valueOf(num));
 			}
 
@@ -148,9 +150,6 @@ public class Day5A {
 		return array;
 	}
 
-	public boolean isNumber(String input) {
-		return input.matches("[0-9]+");
-	}
 
 	public void lineToMap(List<String> allLines, int i, String matchWord, Flag flag,
 			ArrayList<ArrayList<Long>> humidityToLocationMap) {
@@ -163,7 +162,7 @@ public class Day5A {
 			ArrayList<Long> row = new ArrayList<Long>();
 
 			for (String num : allLines.get(i).split(" ")) {
-				if (isNumber(num)) {
+				if (AOCHelper.isNumber(num)) {
 					row.add(Long.parseLong(num));
 				}
 

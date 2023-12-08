@@ -2,6 +2,7 @@ package com.crosafan.aoc.days;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import me.tongfei.progressbar.ProgressBar;
@@ -55,9 +56,28 @@ public class Day5B {
 			lineToMap(allLines, i, "temperature-to-humidity map:", longemperatureToHumidity, temperatureToHumidityMap);
 			lineToMap(allLines, i, "humidity-to-location map:", inHumidityToLocation, humidityToLocationMap);
 		}
+		
+		
+		Comparator<List<Long>> rowCom=new Comparator<List<Long>> () {
+		    @Override
+		    public int compare(List<Long> a, List<Long> b) {
+		        return a.get(0).compareTo(b.get(0));
+		    }
+		};
 		ArrayList<Long> temp = new ArrayList<Long>();
 		ArrayList<Long> locations = new ArrayList<Long>();
+		
+		
+//		Collections.sort(seedToSoilMap, rowCom);
+//		Collections.sort(soilToFertilizerMap, rowCom);
+//		Collections.sort(fertilizerToWaterMap, rowCom);
+//		Collections.sort(waterToLightMap, rowCom);
+//		Collections.sort(lightToTemperatureMap, rowCom);
+//		Collections.sort(temperatureToHumidityMap, rowCom);
+//		Collections.sort(humidityToLocationMap, rowCom);
 
+		
+		
 		long[][] array = convertTo2DArray(seedToSoilMap);
 		seedToSoilMap = null;
 		long[][] array1 = convertTo2DArray(soilToFertilizerMap);
@@ -119,7 +139,7 @@ public class Day5B {
 			long endRange = startRange + array[i][2];
 
 			long mapping = array[i][0];
-			if (key >= startRange && key <= endRange) {
+			if (key > startRange && key < endRange) {
 
 				result = key - startRange + mapping;
 				return result;

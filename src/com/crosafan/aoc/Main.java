@@ -10,6 +10,7 @@ import com.crosafan.aoc.days.Day4B;
 import com.crosafan.aoc.days.Day5A;
 import com.crosafan.aoc.days.Day5B;
 import com.crosafan.aoc.days.Day6A;
+import com.crosafan.aoc.days.Day6B;
 
 public class Main {
 
@@ -22,17 +23,15 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		Day6A day6A = new Day6A();
+		Day6B day6B = new Day6B();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
 		testLines.add("Time:      7  15   30");
 		testLines.add("Distance:  9  40  200");
-		int result = day6A.solve(allLines);
-		
+		int result = day6B.solve(allLines);
 
-		
-		System.out.println("Result:"+result);
+		System.out.println("Result:" + result);
 
 	}
 

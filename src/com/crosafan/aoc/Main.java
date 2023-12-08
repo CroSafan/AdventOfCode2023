@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.crosafan.aoc.days.Day7B;
+import com.crosafan.aoc.days.Day8A;
 
 public class Main {
 
@@ -14,21 +14,25 @@ public class Main {
 
 		List<String> allLines = null;
 		try {
-			allLines = Files.readAllLines(Paths.get("resources/input07.txt"));
+			allLines = Files.readAllLines(Paths.get("resources/input08.txt"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		Day7B day7B = new Day7B();
+		Day8A day8A = new Day8A();
 
 		ArrayList<String> testLines = new ArrayList<String>();
 
-		testLines.add("32T3K 765");
-		testLines.add("T55J5 684");
-		testLines.add("KK677 28");
-		testLines.add("KTJJT 220");
-		testLines.add("QQQJA 483");
-		int result = day7B.solve(allLines);
+		testLines.add("RL");
+		testLines.add("");
+		testLines.add("AAA = (BBB, CCC)");
+		testLines.add("BBB = (DDD, EEE)");
+		testLines.add("CCC = (ZZZ, GGG)");
+		testLines.add("DDD = (DDD, DDD)");
+		testLines.add("EEE = (EEE, EEE)");
+		testLines.add("GGG = (GGG, GGG)");
+		testLines.add("ZZZ = (ZZZ, ZZZ)");
+		int result = day8A.solve(allLines);
 
 		System.out.println("Result:" + result);
 

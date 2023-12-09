@@ -16,10 +16,8 @@ public class Day9B {
 		int result = 0;
 
 		for (String line : allLines) {
-
 			result += predictValue(line);
 		}
-
 		return result;
 
 	}
@@ -38,7 +36,7 @@ public class Day9B {
 		for (int i = 0; i < rows.size(); i++) {
 			rows.add(new ArrayList<Integer>());
 			for (int j = 0; j < rows.get(i).size() - 1; j++) {
-				int diff =rows.get(i).get(j + 1)-rows.get(i).get(j);
+				int diff = rows.get(i).get(j + 1) - rows.get(i).get(j);
 				rows.get(i + 1).add(diff);
 			}
 			if (rows.get(i + 1).stream().distinct().toList().get(0) == 0 && rows.get(i + 1).isEmpty()
@@ -47,10 +45,6 @@ public class Day9B {
 			}
 		}
 
-//		for(ArrayList<Integer> row : rows) {
-//			row.sort(Comparator.reverseOrder());
-//		}
-
 		int result = 0;
 		for (int i = rows.size() - 1; i >= 0; i--) {
 			int firstNum = rows.get(i).get(0);
@@ -58,8 +52,6 @@ public class Day9B {
 			result = firstNum - result;
 
 		}
-
-		System.out.println(result);
 
 		return result;
 	}
